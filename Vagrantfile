@@ -7,8 +7,8 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise64"
-  
+  config.vm.box = "quantal32"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/165709740/boxes/quantal32-vanilla.box"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
