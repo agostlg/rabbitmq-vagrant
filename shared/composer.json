@@ -1,0 +1,12 @@
+{
+    "name": "agostinho/shared",
+    "require": {
+        "videlalvaro/php-amqplib": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Luiz Gustavo",
+            "email": "luiz.gustavo.agostinho@gmail.com"
+        }
+    ]
+}
