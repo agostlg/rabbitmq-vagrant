@@ -1,0 +1,4 @@
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-plugins enable rabbitmq_management_visualiser
+rabbitmq-plugins enable rabbitmq_federation
+	

@@ -4,8 +4,7 @@ if !(grep www.rabbitmq.com /etc/apt/sources.list) then
 	apt-get update > /dev/null
 	apt-get install -y rabbitmq-server
 	# install admin plugin
-	rabbitmq-plugins enable rabbitmq_management
-	rabbitmq-plugins enable rabbitmq_management_visualiser
+	./provision/rabbitmq/plugins/enable.sh
 	# install python API
 	wget http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_1_5/bin/rabbitmqadmin -o /usr/local/bin/rabbitmqadmin
 	# autocomplete commands available on bash
