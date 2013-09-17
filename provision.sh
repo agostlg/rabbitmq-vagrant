@@ -3,8 +3,13 @@ if !(grep www.rabbitmq.com /etc/apt/sources.list) then
 	wget -qO - http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -
 	apt-get update > /dev/null
 	apt-get install -y rabbitmq-server
-	# install admin plugin
-	./provision/rabbitmq/plugins/enable.sh
+	# install plugins
+	
+	rabbitmq-plugins enable rabbitmq_management
+	rabbitmq-plugins enable rabbitmq_management_visualiser
+	rabbitmq-plugins enable rabbitmq_federation
+	rabbitmq-plugins enable rabbitmq_federation_management
+	
 	# install python API
 	wget http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_1_5/bin/rabbitmqadmin -o /usr/local/bin/rabbitmqadmin
 	# autocomplete commands available on bash
