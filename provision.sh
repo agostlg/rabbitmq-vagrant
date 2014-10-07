@@ -16,3 +16,7 @@ if !(grep www.rabbitmq.com /etc/apt/sources.list) then
 	python rabbitmqadmin --bash-completion > /etc/bash_completion.d/rabbitmqadmin
 	service rabbitmq-server restart
 fi
+rabbitmqctl add_user admin password
+rabbitmqctl set_user_tags admin administrator
+rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+
